@@ -1,6 +1,5 @@
 {
 	"name": "kesty/view",
-	"version": "1.0.0",
 	"description": "Laravel View Standalone",
 	"homepage": "https://github.com/olubunmi708/views",
 	"keywords": ["laravel", "blade", "views", "standalone"],
