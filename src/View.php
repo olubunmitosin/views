@@ -1,15 +1,9 @@
-<?php namespace Gears;
-////////////////////////////////////////////////////////////////////////////////
-// __________ __             ________                   __________              
-// \______   \  |__ ______  /  _____/  ____ _____ ______\______   \ _______  ___
-//  |     ___/  |  \\____ \/   \  ____/ __ \\__  \\_  __ \    |  _//  _ \  \/  /
-//  |    |   |   Y  \  |_> >    \_\  \  ___/ / __ \|  | \/    |   (  <_> >    < 
-//  |____|   |___|  /   __/ \______  /\___  >____  /__|  |______  /\____/__/\_ \
-//                \/|__|           \/     \/     \/             \/            \/
-// -----------------------------------------------------------------------------
-//          Designed and Developed by Brad Jones <brad @="bjc.id.au" />         
-// -----------------------------------------------------------------------------
-////////////////////////////////////////////////////////////////////////////////
+<?php namespace Lara;
+
+///////////////////////////////////
+// author: Olubunmi Tosin
+// olubunmivictor6@gmail.com
+//////////////////////////////////
 
 use RuntimeException;
 use Gears\Di\Container;
@@ -91,7 +85,7 @@ class View extends Container
 	 * =========================================================================
 	 * An instance of ```Illuminate\View\Engines\EngineResolver```.
 	 * We expect that the resolver has been configured something like:
-	 * 
+	 *
 	 * ```php
 	 * $resolver = new EngineResolver;
 	 * $resolver->register('php', $this->phpEngine);
@@ -120,18 +114,18 @@ class View extends Container
 	 * This is where we set all our defaults. If you need to customise this
 	 * container this is a good place to look to see what can be configured
 	 * and how to configure it.
-	 * 
+	 *
 	 * Parameters:
 	 * -------------------------------------------------------------------------
 	 * n/a
-	 * 
+	 *
 	 * Returns:
 	 * -------------------------------------------------------------------------
 	 * void
 	 */
 	protected function setDefaults()
 	{
-		$this->cachePath = '/tmp/gears-views-cache';
+		$this->cachePath = '/tmp/lara-views-cache';
 
 		$this->filesystem = function()
 		{
@@ -189,41 +183,41 @@ class View extends Container
 	 * Method: __construct
 	 * =========================================================================
 	 * Here we configure ourselves and then make sure the cache folder exists.
-	 * 
+	 *
 	 * Example usage:
-	 * 
+	 *
 	 * ```php
-	 * $view = new Gears\View('/path/to/my/views');
+	 * $view = new Lara\View('/path/to/my/views');
 	 * echo $view->make('master');
 	 * ```
-	 * 
+	 *
 	 * > NOTE: If you want to provide a custom cache path. It must be injected
 	 * > into the constructor. As we check that it exists at construction time.
-	 * 
+	 *
 	 * For example the following will not work:
-	 * 
+	 *
 	 * ```php
-	 * $view = new Gears\View('/path/to/my/views');
+	 * $view = new Lara\View('/path/to/my/views');
 	 * $view->cachePath = '/custom/cache/path';
 	 * ```
-	 * 
+	 *
 	 * But this will work as expected:
-	 * 
+	 *
 	 * ```php
-	 * $view = new Gears\View('/path/to/my/views',
+	 * $view = new Lara\View('/path/to/my/views',
 	 * [
 	 * 		'cachePath' => '/custom/cache/path'
 	 * ]);
 	 * ```
-	 * 
+	 *
 	 * Parameters:
 	 * -------------------------------------------------------------------------
 	 * n/a
-	 * 
+	 *
 	 * Returns:
 	 * -------------------------------------------------------------------------
 	 * void
-	 * 
+	 *
 	 * Throws:
 	 * -------------------------------------------------------------------------
 	 * - RuntimeException: When the cache path is not writeable or
@@ -270,16 +264,16 @@ class View extends Container
 	 * Method: globalise
 	 * =========================================================================
 	 * Now in a normal laravel application you can call the view api like so:
-	 * 
+	 *
 	 * ```php
 	 * View::make('my-view');
 	 * ```
-	 * 
+	 *
 	 * This is because laravel has the IoC container with Service Providers and
 	 * Facades and other intresting things that work some magic to set this up
 	 * for you. Have a look in you main app.php config file and checkout the
 	 * aliases section.
-	 * 
+	 *
 	 * If you want to be able to do the same in your
 	 * application you need to call this method.
 	 *
@@ -290,7 +284,7 @@ class View extends Container
 	 * Returns:
 	 * -------------------------------------------------------------------------
 	 * void
-	 * 
+	 *
 	 * Throws:
 	 * -------------------------------------------------------------------------
 	 * - RuntimeException: When a class of the same name as the alias
@@ -313,7 +307,7 @@ class View extends Container
 		}
 
 		// Create the alias
-		class_alias('\Gears\View', $alias);
+		class_alias('\Lara\View', $alias);
 
 		// Save our instance
 		self::$instance = $this;
@@ -353,7 +347,7 @@ class View extends Container
 	 * Returns:
 	 * -------------------------------------------------------------------------
 	 * mixed
-	 * 
+	 *
 	 * Throws:
 	 * -------------------------------------------------------------------------
 	 * - RuntimeException: When we have not been globalised.

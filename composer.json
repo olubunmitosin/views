@@ -8,14 +8,14 @@
 	{
 		"psr-4":
 		{
-			"Gears\\": "src"
+			"Lara\\": "src"
 		}
 	},
 	"require":
 	{
 		"gears/di": "*",
-		"illuminate/view": "5.*",
-		"illuminate/events": "5.*"
+		"illuminate/view": "5.5.*",
+		"illuminate/events": "5.5.*"
 	},
 	"require-dev":
 	{
