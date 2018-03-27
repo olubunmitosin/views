@@ -1,5 +1,6 @@
 {
 	"name": "kesty/view",
+	"version": "1.0.0",
 	"description": "Laravel View Standalone",
 	"homepage": "https://github.com/olubunmi708/views",
 	"keywords": ["laravel", "blade", "views", "standalone"],
@@ -13,6 +14,7 @@
 	},
 	"require":
 	{
+		"php": ">=7.0",
 		"gears/di": "*",
 		"illuminate/view": "5.5.*",
 		"illuminate/events": "5.5.*"
