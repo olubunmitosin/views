@@ -1,6 +1,6 @@
 {
 	"name": "kesty/view",
-	"description": "Laravel Sessions Standalone",
+	"description": "Laravel View Standalone",
 	"homepage": "https://github.com/olubunmi708/views",
 	"keywords": ["laravel", "blade", "views", "standalone"],
 	"license": "MIT",
