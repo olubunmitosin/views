@@ -22,5 +22,11 @@
 		"phpunit/phpunit": "4.*",
 		"codegyre/robo": "*",
 		"guzzlehttp/guzzle": "4.*"
-	}
+	},
+	"authors": [
+        {
+            "name": "Olubunmi Tosin",
+            "email": "olubunmivictor6@gmail.com"
+        }
+    ]
 }
