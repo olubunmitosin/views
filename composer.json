@@ -1,5 +1,5 @@
 {
-	"name": "gears/view",
+	"name": "lara/view",
 	"description": "Laravel Sessions Standalone",
 	"homepage": "https://github.com/phpgearbox/view",
 	"keywords": ["laravel", "blade", "views", "standalone"],
